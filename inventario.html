@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Inventario</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans+Condensed:300|Josefin+Slab|News+Cycle'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="nav">
+    <div class="nw">
+        <div class="n1">
+            <img src="images/logo1.png" alt="">
+            <p>IMPRENTA VEGA</p>
+        </div>
+        <div class="n2">
+            <ul>
+                <li><a href="#" class="smoothScroll" id="N1">BOLETA</a></li>
+                <li><a href="#" class="smoothScroll" id="N2">INVENTARIO</a></li>
+                <li><a href="#" class="smoothScroll" id="N3">CONTROL EMPLEADOS</a></li>
+                <li><a href="#" class="smoothScroll">CONTÁCTANOS</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<table class="flatTable">
+    <tr class="titleTr">
+        <td class="titleTd">
+            <div class="container">
+                <label>Nombre del producto:</label>
+                <input type="search" placeholder="" class="search"/>
+            </div>
+        </td>
+        <td colspan="5"></td>
+    </tr>
+    <tr class="headingTr">
+        <td>Nombre de Producto</td>
+        <td>Descripción</td>
+        <td>Stock Disponible</td>
+        <td>Estado</td>
+        <td>Precio Unitario</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Hoja Bond</td>
+        <td>Marca: Excel</td>
+        <td>150</td>
+        <td>OK</td>
+        <td>$15.00</td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X"/></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></div>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Lapiceros</td>
+        <td>Marca Pilot</td>
+        <td>200</td>
+        <td>OK</td>
+        <td>$1.50</td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X"/></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X"/></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<form>
+    <div class="container">
+        <label>Nombre de Producto:</label>
+        <input type="text" placeholder="Nombre"/>
+    </div>
+    <div class="container">
+        <label>Descripción:</label>
+        <input type="text" placeholder="Descripción del producto"/>
+    </div>
+    <div class="container">
+        <label>Stock:</label>
+        <input type="text" placeholder="Agregar Stock"/>
+        <label>Estado:</label>
+        <select>
+            <option value="Bueno" selected>Bueno</option>
+            <option value="Intermedio">Intermedio</option>
+            <option value="Malo">Malo</option>
+        </select>
+        <label>Precio Unitario:</label>
+        <input type="text" placeholder="Precio"/>
+    </div>
+
+
+    <div class="container">
+        <button>Modificar Prodcuto</button>
+        <button>Anular Producto</button>
+        <button>Agregar Producto</button>
+        <!--<button>Generar Boleta</button>-->
+    </div>
+</form>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="smoothscroll.js"></script>
+<script>
+    $(".button").click(function () {
+        $("#sForm").toggleClass("open");
+    });
+
+    $(".controlTd").click(function () {
+        $(this).children(".settingsIcons").toggleClass("display");
+        $(this).children(".settingsIcon").toggleClass("openIcon");
+    });
+
+    function outputUpdate(vol) {
+        document.querySelector('#canti').value = vol;
+    }
+</script>
+</body>
+</html>
