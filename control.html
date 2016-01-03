@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Empleados</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans+Condensed:300|Josefin+Slab|News+Cycle'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="nav">
+    <div class="nw">
+        <div class="n1">
+            <img src="images/logo1.png" alt="">
+            <p>IMPRENTA VEGA</p>
+        </div>
+        <div class="n2">
+            <ul>
+                <li><a href="#" class="smoothScroll" id="N1">BOLETA</a></li>
+                <li><a href="#" class="smoothScroll" id="N2">INVENTARIO</a></li>
+                <li><a href="#" class="smoothScroll" id="N3">CONTROL EMPLEADOS</a></li>
+                <li><a href="#" class="smoothScroll">CONTÁCTANOS</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<table class="flatTable">
+    <tr class="titleTr">
+        <td class="titleTd">
+            <div class="container">
+                <label>Nombre del empleado:</label>
+                <input type="search" placeholder="" class="search"/>
+            </div>
+        </td>
+        <td colspan="6"></td>
+    </tr>
+    <tr class="headingTr">
+        <td>Nombres y apellidos</td>
+        <td>DNI</td>
+        <td>Edad</td>
+        <td>Fecha de nacimiento</td>
+        <td>Cargo</td>
+        <td>Sueldo</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Andrei Aguirre Ramos</td>
+        <td>11112222</td>
+        <td>15</td>
+        <td>15/05/2000</td>
+        <td>Cargador</td>
+        <td>$750.00</td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X"/></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></div>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Hernan Cárcamo Liendo</td>
+        <td>22221111</td>
+        <td>14</td>
+        <td>15/08/2001</td>
+        <td>Supervisor</td>
+        <td>$5000.00</td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X"/></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X"/></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon"/></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<form>
+    <div class="container">
+        <label>Nombre:</label>
+        <input type="text" placeholder="Nombre"/>
+    </div>
+    <div class="container">
+        <label>DNI:</label>
+        <input type="text" placeholder="DNI"/>
+        <label>Edad:</label>
+        <input type="text" placeholder="Edad"/>
+    </div>
+    <div class="container">
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" name="date" min="1945-12-31" max="today"/>
+        <label>Cargo:</label>
+        <select>
+            <option value="Administrador" selected>Administrador</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Chule">Chule</option>
+        </select>
+        <label>Sueldo:</label>
+        <input type="text" placeholder="Sueldo"/>
+    </div>
+
+
+    <div class="container">
+        <button>Modificar datos</button>
+        <button>Anular empleado</button>
+        <button>Agregar empleado</button>
+        <!--<button>Generar Boleta</button>-->
+    </div>
+</form>
+</body>
+</html>

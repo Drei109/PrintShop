@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boleta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pontano+Sans|Open+Sans+Condensed:300|Josefin+Slab|News+Cycle' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="nav">
+    <div class="nw">
+        <div class="n1">
+            <img src="images/logo1.png" alt="">
+            <p>IMPRENTA VEGA</p>
+        </div>
+        <div class="n2">
+            <ul>
+                <li><a href="#" class="smoothScroll" id="N1">BOLETA</a></li>
+                <li><a href="#" class="smoothScroll" id="N2">INVENTARIO</a></li>
+                <li><a href="#" class="smoothScroll" id="N3">CONTROL EMPLEADOS</a></li>
+                <li><a href="#" class="smoothScroll">CONTÁCTANOS</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<form>
+    <div class="container">
+        <label>Señor (es):</label>
+        <input type="text" placeholder="Nombres y Apellidos"/>
+    </div>
+    <div class="container">
+        <label>Dirección:</label>
+        <input type="text" placeholder="Dirección"/>
+    </div>
+    <div class="container">
+        <label>Documento de Identidad</label>
+        <input type="text" placeholder="DNI / RUC"/>
+        <label>Fecha:</label>
+        <input type="date" name="date" min="1996-12-31" max="2017-12-31"/>
+    </div>
+
+
+</form>
+<table class="flatTable">
+    <tr class="titleTr">
+        <td class="titleTd">
+            <div class="container">
+                <label>Nombre del producto:</label>
+                <input type="search" placeholder="" class="search"/>
+            </div>
+            <div class="container">
+                <label>Cantidad:</label>
+                <input type="range" min="0" max="500" value="100" id="fader" step="1" oninput="outputUpdate(value)" class="slider">
+                <output for="fader" id="canti" >50</output>
+                <input type="text" class="search">
+            </div>
+        </td>
+        <td colspan="4"></td>
+        <td class="plusTd button"></td>
+    </tr>
+    <tr class="headingTr">
+        <td>Nombre de Producto</td>
+        <td>Cantidad</td>
+        <td>Descripción</td>
+        <td>Precio Unitario</td>
+        <td>Precio</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Hoja Bond Marca: </td>
+        <td>$12.00</td>
+        <td>Hojas bond</td>
+        <td>$15.00</td>
+        <td>$180.00</td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Impresión de Boletas al por mayor</td>
+        <td>$15.00</td>
+        <td>Impresión de Boleta</td>
+        <td>$24.00</td>
+        <td>$360.00</td>
+        <td class="controlTd">
+            <div class="settingsIcons">
+                <span class="settingsIcon"><img src="http://i.imgur.com/nnzONel.png" alt="X" /></span>
+                <span class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></span>
+                <div class="settingsIcon"><img src="http://i.imgur.com/UAdSFIg.png" alt="placeholder icon" /></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div class="container">
+    <button>Modificar</button>
+    <button>Anular</button>
+    <button>Agregar</button>
+    <button>Generar Boleta</button>
+</div>
+
+
+<!--<div id="sForm" class="sForm sFormPadding">-->
+    <!--<span class="button close"><img src="http://i.imgur.com/nnzONel.png" alt="X"  class="" /></span>-->
+    <!--<h2 class="title">Add a New Record</h2>-->
+<!--</div>-->
+</body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="smoothscroll.js"></script>
+<script>
+    $(".button").click(function () {
+        $("#sForm").toggleClass("open");
+    });
+
+    $(".controlTd").click(function () {
+        $(this).children(".settingsIcons").toggleClass("display");
+        $(this).children(".settingsIcon").toggleClass("openIcon");
+    });
+
+    function outputUpdate(vol) {
+        document.querySelector('#canti').value = vol;
+    }
+</script>
+
+</html>
