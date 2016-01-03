@@ -21,12 +21,12 @@
                     <li><a href="#ubicanos" class="smoothScroll" id="N3">UBÍCANOS</a></li>
                     <li><a href="#contactanos" class="smoothScroll">CONTÁCTANOS</a></li>
                     <li id="login" class="smoothScroll">
-                        <!--<a href="#home" class="smoothScroll" id="login-trigger" >LOGIN</a>-->
                         <a id="login-trigger" class="N9">LOGIN</a>
                         <form id="login-form"  method="post">
                             <p><input class="text" type="text" name="username" placeholder="Usuario" /></p>
                             <p><input class="text" type="password" name="password" placeholder="Password" /></p>
-                            <p><a href="index.html" class="link"><input class="submit" type="submit" value="Ingresar" /></a></p>
+                                    <a class="submit" href="test.html">Ingresar</a>
+
                         </form>
                     </li>
                 </ul>
@@ -136,7 +136,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="smoothscroll.js"></script>
     <script>
-        $("#login-trigger").click(function() {
+        $("#login-trigger").mouseover(function() {
             $("#login-form").slideToggle();
 
         });
